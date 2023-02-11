@@ -22,8 +22,47 @@ async function getRoomById(roomId: number, userId: number){
     return reserveData
 }
 
+async function getBookingData(userId: number){
+    if (!userId) throw notFoundError()
+
+    const bookingData = await bookingRepository.findReserve(userId)
+    const roomData = await roomRepository.getRoomById(bookingData.roomId)
+    const bookingWithRoomData = {
+        id: bookingData.id,
+        room: roomData
+    }
+    return bookingWithRoomData
+}
+
+async function updateBooking(roomId: number, userId: number, bookingId : number){
+    if (!roomId || !userId || !bookingId) throw notFoundError()
+    
+    const findEnrollmentByUserId = await enrollmentRepository.findWithAddressByUserId(userId)
+    const verifyIfTokenIsPaid = await ticketRepository.findTicketByEnrollmentId(findEnrollmentByUserId.id)
+    const verifyIfHotelIsNotOnline = await ticketRepository.findTicketTypeByTicketId(verifyIfTokenIsPaid.ticketTypeId)
+
+    if(verifyIfTokenIsPaid.status === "RESERVED" || verifyIfHotelIsNotOnline.isRemote === true || verifyIfHotelIsNotOnline.includesHotel === false ) throw ForbiddenError()
+
+    const findReservedRoom = await bookingRepository.findReserve(userId)
+    const RoomThatUserAre = await roomRepository.getRoomById(findReservedRoom.roomId)
+    if (!RoomThatUserAre) throw notFoundError()
+    
+    const getNewRoomById = await roomRepository.getRoomById(roomId)
+
+    if(getNewRoomById.capacity < 1) throw ForbiddenError()
+
+    const removeRoomFromUser = await roomRepository.removeRoom(RoomThatUserAre.id, RoomThatUserAre.capacity)
+    
+    const reserveData = await bookingRepository.updateAReserve(bookingId, getNewRoomById.id)
+    const updateRoomCapacity = await bookingRepository.updateRoomCapacity(roomId, getNewRoomById.capacity)
+
+    return reserveData.id
+}
+
 const bookingService = {
-    getRoomById
+    getRoomById,
+    getBookingData,
+    updateBooking
 }
 
 export default bookingService

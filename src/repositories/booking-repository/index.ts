@@ -9,6 +9,19 @@ async function makeAReserve(roomId: number, userId: number){
         })
 }
 
+async function updateAReserve(bookingId: number, roomId: number){
+    return await prisma.booking.update({
+        where: {
+            id: bookingId
+        },
+        data: {
+            roomId: {
+                set: roomId
+            }
+        }
+    })
+}
+
 async function updateRoomCapacity(roomId: number, capacity: number){
     return await prisma.room.update({
         where: {
@@ -20,9 +33,26 @@ async function updateRoomCapacity(roomId: number, capacity: number){
     })
 }
 
+async function findReserve(userId: number){
+    return await prisma.booking.findFirst({
+        select: {
+            id: true,
+            roomId: true
+        },
+        where: {
+            userId
+        }
+    })
+}
+
+
+
+
 const bookingRepository = {
     makeAReserve,
-    updateRoomCapacity
+    updateRoomCapacity,
+    findReserve,
+    updateAReserve
 }
 
 export default bookingRepository
