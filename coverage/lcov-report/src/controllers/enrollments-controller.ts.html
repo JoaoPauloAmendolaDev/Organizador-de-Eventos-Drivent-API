@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">95% </span>
+                <span class="strong">25% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>19/20</span>
+                <span class='fraction'>5/20</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>0/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">95% </span>
+                <span class="strong">25% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>19/20</span>
+                <span class='fraction'>5/20</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -106,44 +106,44 @@
 <a name='L41'></a><a href='#L41'>41</a>
 <a name='L42'></a><a href='#L42'>42</a>
 <a name='L43'></a><a href='#L43'>43</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -152,40 +152,40 @@ import enrollmentsService from "@/services/enrollments-service";
 import { Response } from "express";
 import httpStatus from "http-status";
 &nbsp;
-export async function getEnrollmentByUser(req: AuthenticatedRequest, res: Response) {
-  const { userId } = req;
+export async function <span class="fstat-no" title="function not covered" >getEnrollmentByUser(</span>req: AuthenticatedRequest, res: Response) {
+  const { userId } = <span class="cstat-no" title="statement not covered" >req;</span>
 &nbsp;
-  try {
-    const enrollmentWithAddress = await enrollmentsService.getOneWithAddressByUserId(userId);
+<span class="cstat-no" title="statement not covered" >  try {</span>
+    const enrollmentWithAddress = <span class="cstat-no" title="statement not covered" >await enrollmentsService.getOneWithAddressByUserId(userId);</span>
 &nbsp;
-    return res.status(httpStatus.OK).send(enrollmentWithAddress);
+<span class="cstat-no" title="statement not covered" >    return res.status(httpStatus.OK).send(enrollmentWithAddress);</span>
   } catch (error) {
-    return res.sendStatus(httpStatus.NOT_FOUND);
+<span class="cstat-no" title="statement not covered" >    return res.sendStatus(httpStatus.NOT_FOUND);</span>
   }
 }
 &nbsp;
-export async function postCreateOrUpdateEnrollment(req: AuthenticatedRequest, res: Response) {
-  try {
-    await enrollmentsService.createOrUpdateEnrollmentWithAddress({
+export async function <span class="fstat-no" title="function not covered" >postCreateOrUpdateEnrollment(</span>req: AuthenticatedRequest, res: Response) {
+<span class="cstat-no" title="statement not covered" >  try {</span>
+<span class="cstat-no" title="statement not covered" >    await enrollmentsService.createOrUpdateEnrollmentWithAddress({</span>
       ...req.body,
       userId: req.userId,
     });
 &nbsp;
-    return res.sendStatus(httpStatus.OK);
+<span class="cstat-no" title="statement not covered" >    return res.sendStatus(httpStatus.OK);</span>
   } catch (error) {
 <span class="cstat-no" title="statement not covered" >    return res.sendStatus(httpStatus.BAD_REQUEST);</span>
   }
 }
 &nbsp;
-export async function getAddressFromCEP(req: AuthenticatedRequest, res: Response) {
-  const { cep } = req.query as Record&lt;string, string&gt;;
+export async function <span class="fstat-no" title="function not covered" >getAddressFromCEP(</span>req: AuthenticatedRequest, res: Response) {
+  const { cep } = <span class="cstat-no" title="statement not covered" >req.query as Record&lt;string, string&gt;;</span>
 &nbsp;
-  try {
-    const address = await enrollmentsService.getAddressFromCEP(cep);
-    return res.status(httpStatus.OK).send(address);
+<span class="cstat-no" title="statement not covered" >  try {</span>
+    const address = <span class="cstat-no" title="statement not covered" >await enrollmentsService.getAddressFromCEP(cep);</span>
+<span class="cstat-no" title="statement not covered" >    return res.status(httpStatus.OK).send(address);</span>
   } catch (error) {
-    if (error.name === "NotFoundError") {
-      return res.sendStatus(httpStatus.NOT_FOUND);
+<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (error.name === "NotFoundError") {</span>
+<span class="cstat-no" title="statement not covered" >      return res.sendStatus(httpStatus.NOT_FOUND);</span>
     }
   }
 }
@@ -196,7 +196,7 @@ export async function getAddressFromCEP(req: AuthenticatedRequest, res: Response
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Sat Feb 11 2023 00:02:59 GMT-0300 (Horário Padrão de Brasília)
+                at Sat Feb 11 2023 02:17:43 GMT-0300 (Horário Padrão de Brasília)
             </div>
         <script src="../../prettify.js"></script>
         <script>

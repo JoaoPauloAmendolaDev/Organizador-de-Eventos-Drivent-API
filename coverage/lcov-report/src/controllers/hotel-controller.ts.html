@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">95.23% </span>
+                <span class="strong">19.04% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>20/21</span>
+                <span class='fraction'>4/21</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>0/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">95.23% </span>
+                <span class="strong">19.04% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>20/21</span>
+                <span class='fraction'>4/21</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -102,37 +102,37 @@
 <a name='L37'></a><a href='#L37'>37</a>
 <a name='L38'></a><a href='#L38'>38</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -142,34 +142,34 @@ import { AuthenticatedRequest } from "@/middlewares";
 import hotelService from "@/services/hotels-service";
 import httpStatus from "http-status";
 &nbsp;
-export async function getHotels(req: AuthenticatedRequest, res: Response) {
-  const { userId } = req;
+export async function <span class="fstat-no" title="function not covered" >getHotels(</span>req: AuthenticatedRequest, res: Response) {
+  const { userId } = <span class="cstat-no" title="statement not covered" >req;</span>
 &nbsp;
-  try {
-    const hotels = await hotelService.getHotels(Number(userId));
-    return res.status(httpStatus.OK).send(hotels);
+<span class="cstat-no" title="statement not covered" >  try {</span>
+    const hotels = <span class="cstat-no" title="statement not covered" >await hotelService.getHotels(Number(userId));</span>
+<span class="cstat-no" title="statement not covered" >    return res.status(httpStatus.OK).send(hotels);</span>
   } catch (error) {
-    if (error.name === "NotFoundError") {
-      return res.sendStatus(httpStatus.NOT_FOUND);
+<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (error.name === "NotFoundError") {</span>
+<span class="cstat-no" title="statement not covered" >      return res.sendStatus(httpStatus.NOT_FOUND);</span>
     }
-    return res.sendStatus(httpStatus.PAYMENT_REQUIRED);
+<span class="cstat-no" title="statement not covered" >    return res.sendStatus(httpStatus.PAYMENT_REQUIRED);</span>
   }
 }
 &nbsp;
-export async function getHotelsWithRooms(req: AuthenticatedRequest, res: Response) {
-  const { userId } = req;
-  const { hotelId } = req.params;
+export async function <span class="fstat-no" title="function not covered" >getHotelsWithRooms(</span>req: AuthenticatedRequest, res: Response) {
+  const { userId } = <span class="cstat-no" title="statement not covered" >req;</span>
+  const { hotelId } = <span class="cstat-no" title="statement not covered" >req.params;</span>
 &nbsp;
-  try {
-    const hotels = await hotelService.getHotelsWithRooms(Number(userId), Number(hotelId));
+<span class="cstat-no" title="statement not covered" >  try {</span>
+    const hotels = <span class="cstat-no" title="statement not covered" >await hotelService.getHotelsWithRooms(Number(userId), Number(hotelId));</span>
 &nbsp;
-    return res.status(httpStatus.OK).send(hotels);
+<span class="cstat-no" title="statement not covered" >    return res.status(httpStatus.OK).send(hotels);</span>
   } catch (error) {
-    if (error.name === "NotFoundError") {
-      return res.sendStatus(httpStatus.NOT_FOUND);
+<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (error.name === "NotFoundError") {</span>
+<span class="cstat-no" title="statement not covered" >      return res.sendStatus(httpStatus.NOT_FOUND);</span>
     }
-    if (error.name === "CannotListHotelsError") {
-      return res.sendStatus(httpStatus.PAYMENT_REQUIRED);
+<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (error.name === "CannotListHotelsError") {</span>
+<span class="cstat-no" title="statement not covered" >      return res.sendStatus(httpStatus.PAYMENT_REQUIRED);</span>
     }
 <span class="cstat-no" title="statement not covered" >    return res.sendStatus(httpStatus.BAD_REQUEST);</span>
   }
@@ -181,7 +181,7 @@ export async function getHotelsWithRooms(req: AuthenticatedRequest, res: Respons
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Sat Feb 11 2023 00:02:59 GMT-0300 (Horário Padrão de Brasília)
+                at Sat Feb 11 2023 02:17:43 GMT-0300 (Horário Padrão de Brasília)
             </div>
         <script src="../../prettify.js"></script>
         <script>

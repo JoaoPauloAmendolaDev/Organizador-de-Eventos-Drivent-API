@@ -8,8 +8,18 @@ async function getRoomById(id: number){
     })
 }
 
+async function removeRoom(roomId: number, capacity: number){
+    return await prisma.room.update({
+        where: {id: roomId},
+        data: {capacity: {
+            set: capacity - 1
+        }}
+    })
+}
+
 const roomRepository = {
-    getRoomById
+    getRoomById,
+    removeRoom
 }
 
 export default roomRepository

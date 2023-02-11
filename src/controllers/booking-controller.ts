@@ -27,3 +27,17 @@ export async function getBooking(req: AuthenticatedRequest, res: Response, next:
         return res.sendStatus(httpStatus.NOT_FOUND)
     }
 }
+
+export async function updateBooking(req: AuthenticatedRequest, res: Response, next: NextFunction){
+    const bookingId = parseInt(req.params.bookingId)
+    const { roomId } = req.body 
+    const { userId } = req
+
+    try {
+        const updatedBooking = await bookingService.updateBooking(roomId, userId, bookingId)
+        return res.status(httpStatus.OK).send({id: updatedBooking})
+    } catch (error) {
+        if(error.name === "Forbidden") return res.sendStatus(httpStatus.FORBIDDEN)
+        return res.sendStatus(httpStatus.NOT_FOUND)
+    }
+}
