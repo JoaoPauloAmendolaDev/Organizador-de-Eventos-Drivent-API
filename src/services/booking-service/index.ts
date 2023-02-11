@@ -22,8 +22,21 @@ async function getRoomById(roomId: number, userId: number){
     return reserveData
 }
 
+async function getBookingData(userId: number){
+    if (!userId) throw notFoundError()
+
+    const bookingData = await bookingRepository.findReserve(userId)
+    const roomData = await roomRepository.getRoomById(bookingData.roomId)
+    const bookingWithRoomData = {
+        id: bookingData.id,
+        room: roomData
+    }
+    return bookingWithRoomData
+}
+
 const bookingService = {
-    getRoomById
+    getRoomById,
+    getBookingData
 }
 
 export default bookingService

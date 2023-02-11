@@ -16,3 +16,14 @@ export async function postBooking(req: AuthenticatedRequest, res: Response, next
         return res.sendStatus(httpStatus.NOT_FOUND)
     }
 }
+
+export async function getBooking(req: AuthenticatedRequest, res: Response, next: NextFunction){
+    const { userId } = req
+
+    try {
+        const getBookingData = await bookingService.getBookingData(userId)
+        return res.status(httpStatus.OK).send(getBookingData)
+    } catch (error) {
+        return res.sendStatus(httpStatus.NOT_FOUND)
+    }
+}

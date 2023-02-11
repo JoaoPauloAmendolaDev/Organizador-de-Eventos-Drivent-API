@@ -20,9 +20,22 @@ async function updateRoomCapacity(roomId: number, capacity: number){
     })
 }
 
+async function findReserve(userId: number){
+    return await prisma.booking.findFirst({
+        select: {
+            id: true,
+            roomId: true
+        },
+        where: {
+            userId
+        }
+    })
+}
+
 const bookingRepository = {
     makeAReserve,
-    updateRoomCapacity
+    updateRoomCapacity,
+    findReserve
 }
 
 export default bookingRepository
