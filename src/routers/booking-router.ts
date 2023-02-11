@@ -1,10 +1,12 @@
-import { singInPost } from "@/controllers";
-import { validateBody } from "@/middlewares";
-import { signInSchema } from "@/schemas";
+import { postBooking } from "@/controllers/booking-controller";
+import { authenticateToken, validateBody } from "@/middlewares";
+import { bookingSchema } from "@/schemas";
 import { Router } from "express";
 
 const bookingRouter = Router();
 
-bookingRouter.post("/sign-in", validateBody(signInSchema), singInPost);
+bookingRouter
+    .all("/*", authenticateToken)
+    .post("/", validateBody(bookingSchema), postBooking);
 
 export { bookingRouter };
